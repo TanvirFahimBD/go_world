@@ -1,4 +1,4 @@
-package main
+// package main
 
 // func main() {
 
@@ -30,24 +30,25 @@ package main
 
 package main
 
-import "fmt"
-import "reflect"
+import (
+	"fmt"
+	"reflect"
+)
 
 func main() {
 
- var students [3]string
- var fruits []string
- fruits = append(fruits, "Apple","Mango")
- 
- fmt.Println(fruits, len(fruits))
- 
- fmt.Printf("%T\n", fruits) 
- fmt.Printf("%T\n", students)
+	var students [3]string
+	var fruits []string
+	fruits = append(fruits, "Apple", "Mango")
 
- a:= reflect.TypeOf(students).Kind().String()
- b:= reflect.TypeOf(fruits).Kind().String()
- fmt.Println(a)
- fmt.Println(b)
+	fmt.Println(fruits, len(fruits))
+
+	fmt.Printf("%T\n", fruits)
+	fmt.Printf("%T\n", students)
+
+	a := reflect.TypeOf(students).Kind().String()
+	b := reflect.TypeOf(fruits).Kind().String()
+	fmt.Println(a)
+	fmt.Println(b)
 
 }
-
